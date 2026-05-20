@@ -1,0 +1,47 @@
+[
+  {
+    "id": "prod_laptop_hp",
+    "title": "Laptop HP",
+    "description": "Laptop HP Pavilion con procesador Intel Core i7, 16GB RAM, 512GB SSD",
+    "thumbnail": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400",
+    "price": 1500000,
+    "inventory_quantity": 10,
+    "sku": "LAP-HP-001"
+  },
+  {
+    "id": "prod_audifonos_sony",
+    "title": "Audífonos Sony",
+    "description": "Audífonos inalámbricos Sony WH-1000XM4 con cancelación de ruido",
+    "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+    "price": 350000,
+    "inventory_quantity": 25,
+    "sku": "AUD-SONY-001"
+  },
+  {
+    "id": "prod_teclado_mecanico",
+    "title": "Teclado Mecánico",
+    "description": "Teclado mecánico RGB con switches Cherry MX Blue",
+    "thumbnail": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400",
+    "price": 250000,
+    "inventory_quantity": 50,
+    "sku": "TEC-MEC-001"
+  },
+  {
+    "id": "prod_monitor_lg",
+    "title": "Monitor LG 24\"",
+    "description": "Monitor LG UltraWide 24\" Full HD IPS",
+    "thumbnail": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400",
+    "price": 800000,
+    "inventory_quantity": 15,
+    "sku": "MON-LG-001"
+  },
+  {
+    "id": "prod_mouse_inalambrico",
+    "title": "Mouse Inalámbrico",
+    "description": "Mouse ergonómico inalámbrico recargable",
+    "thumbnail": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400",
+    "price": 80000,
+    "inventory_quantity": 100,
+    "sku": "MOU-INAL-001"
+  }
+]
