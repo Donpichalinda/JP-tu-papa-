@@ -1,4 +1,9 @@
+const dotenv = require("dotenv");
+const path = require("path");
 const { loadEnv } = require("@medusajs/utils");
+
+const envPath = process.env.DOTENV_CONFIG_PATH || path.resolve(process.cwd(), ".env.test");
+dotenv.config({ path: envPath });
 loadEnv("test", process.cwd());
 
 module.exports = {

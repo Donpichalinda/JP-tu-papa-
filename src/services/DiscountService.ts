@@ -72,10 +72,10 @@ class DiscountService extends BaseService {
    * Constructor del servicio
    * @param {Object} options - Dependencias inyectadas por Medusa
    */
-  constructor({ discountModel, cartModel }) {
+  constructor(options) {
     super(options);
-    this.discountModel = discountModel;
-    this.cartModel = cartModel;
+    this.discountModel = options?.discountModel;
+    this.cartModel = options?.cartModel;
   }
 
   /**
@@ -107,7 +107,7 @@ class DiscountService extends BaseService {
    * // result2.discount_amount = 10000 (10% de 100000)
    */
   calculateDiscount({ subtotal, promo_code }) {
-    const result = {
+    const result: any = {
       applies: false,
       type: null,
       discount_amount: 0,
@@ -115,6 +115,10 @@ class DiscountService extends BaseService {
       final_subtotal: subtotal,
       message: "",
       promo_code_valid: false,
+      promo_code: null,
+      promo_description: null,
+      promo_error: null,
+      promo_message: null,
     };
 
     // Verificar descuento automático por umbral de monto

@@ -95,10 +95,10 @@ class ShippingService extends BaseService {
    * Constructor del servicio
    * @param {Object} options - Dependencias inyectadas por Medusa
    */
-  constructor({ shippingModel, regionModel }) {
+  constructor(options) {
     super(options);
-    this.shippingModel = shippingModel;
-    this.regionModel = regionModel;
+    this.shippingModel = options?.shippingModel;
+    this.regionModel = options?.regionModel;
   }
 
   /**
@@ -138,7 +138,8 @@ class ShippingService extends BaseService {
    * // result3.status = "rejected"
    * // result3.error = "DISTANCE_EXCEEDED"
    */
-  calculateShipping({ x, y, zone }) {
+  calculateShipping(params) {
+    let { x, y, zone } = params || {};
     // Resultado por defecto (envío no disponible)
     const defaultResult = {
       available: false,

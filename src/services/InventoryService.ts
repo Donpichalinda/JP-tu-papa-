@@ -26,10 +26,10 @@ class InventoryService extends BaseService {
    * Constructor del servicio
    * @param {Object} options - Dependencias inyectadas por Medusa
    */
-  constructor({ productModel, cartModel }) {
+  constructor(options) {
     super(options);
-    this.productModel = productModel;
-    this.cartModel = cartModel;
+    this.productModel = options?.productModel;
+    this.cartModel = options?.cartModel;
   }
 
   /**

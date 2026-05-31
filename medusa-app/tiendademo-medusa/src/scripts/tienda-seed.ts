@@ -8,13 +8,14 @@
  *
  * Run with: npx medusa exec ./src/scripts/tienda-seed.ts
  */
-import { ExecArgs } from "@medusajs/framework/types"
 import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
 import { TIENDA_INVENTORY_MODULE } from "../modules/tienda-inventory"
 import { TIENDA_DISCOUNT_MODULE } from "../modules/tienda-discount"
 import { TIENDA_SHIPPING_MODULE } from "../modules/tienda-shipping"
 
-export default async function seedTiendaDemoData({ container }: ExecArgs) {
+// Avoid strict TS type dependency in integration runner environment
+export default async function seedTiendaDemoData(args: any) {
+  const { container } = args || {};
   const logger = container.resolve(ContainerRegistrationKeys.LOGGER)
 
   // Resolver servicios de los módulos

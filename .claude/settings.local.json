@@ -3,7 +3,17 @@
     "allow": [
       "Bash(package.json:*)",
       "Bash(curl:*)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(TEST_TYPE=integration:http npx jest *)",
+      "Bash(TEST_TYPE=unit npx jest *)",
+      "Bash(TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules npx jest *)",
+      "Bash(set TEST_TYPE=integration:http)",
+      "Bash(set NODE_OPTIONS=--experimental-vm-modules)",
+      "Bash(npx jest *)",
+      "Bash(grep -v \"\\\\.map$\")",
+      "Bash(node -p \"process.execArgv\")",
+      "Bash(node -e \"console.log\\(process.execArgv\\)\")",
+      "Bash(dir *)"
     ]
   }
 }
